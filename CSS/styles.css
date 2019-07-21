@@ -1,0 +1,19 @@
+.purpled {
+  color: purple;
+  font-size: 20px;
+}
+
+.oranged {
+  color: orange;
+  font-size: 10px;
+}
+
+.greened {
+  color: green;
+  font-size: 30px;
+}
+
+p {
+  font-size: 60px;
+  background-color: #33AA33;
+}
