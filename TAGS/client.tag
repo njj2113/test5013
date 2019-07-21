@@ -7,10 +7,6 @@
       <li each={ n in colorList }>{n}</li>
     </ul>
 
-
-
-
-
     <script> //type="es6" to run eslint, but that's disabled for now
         // `this` refers to an instance of an element "client"
         console.dir(this);
@@ -27,8 +23,6 @@
             return outcolor;
         }
 
-
-
         this.on('mount', function(){
           alert("You mounted something!");
         })
@@ -41,30 +35,29 @@
         this.secret = true;
 
         setUsername(e) {
-            this.username = this.refs.myUsername.value.toUpperCase();
-            console.dir(this);
-            if (this.username.toLowerCase() == "orange")
-            {
-              this.shade = "oranged";
-            }
-            else if (this.username.toLowerCase() == "green")
-            {
-              this.shade = "greened";
-            }
-            else if (this.username.toLowerCase() == "purple")
-            {
-              this.shade = "purpled";
-            }
-            else if (this.username.toLowerCase() == "unlock")
-            {
-              this.secret = false;
-            }
-            else if (this.username.toLowerCase() == "lock")
-            {
-              this.secret = true;
-            }
+          this.username = this.refs.myUsername.value.toUpperCase();
+          console.dir(this);
+          if (this.username.toLowerCase() == "orange")
+          {
+            this.shade = "oranged";
+          }
+          else if (this.username.toLowerCase() == "green")
+          {
+            this.shade = "greened";
+          }
+          else if (this.username.toLowerCase() == "purple")
+          {
+            this.shade = "purpled";
+          }
+          else if (this.username.toLowerCase() == "unlock")
+          {
+            this.secret = false;
+          }
+          else if (this.username.toLowerCase() == "lock")
+          {
+            this.secret = true;
+          }
         }
-
     </script>
 
     <style>
