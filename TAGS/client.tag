@@ -6,6 +6,8 @@
 
 
 
+
+
     <script> //type="es6" to run eslint, but that's disabled for now
         // `this` refers to an instance of an element "client"
         console.dir(this);
@@ -16,6 +18,7 @@
             var green = Math.floor(Math.random() * 255);
             var blue = Math.floor(Math.random() * 255);
             //console.log(blue,red,green);
+            var colorList = [red, green, blue];
             var outcolor = "background-color:rgb(" + red.toString(10) + "," + green.toString(10) + "," + blue.toString(10) + ")";
             //console.log(outcolor);
             return outcolor;
