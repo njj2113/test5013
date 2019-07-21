@@ -3,6 +3,9 @@
     <input type="text" ref="myUsername" onchange={ setUsername }>
     <p if={ !secret }>{ username } found the secret!</p>
     <button onclick={ unmount }>Unmount everything!</button>
+    <ul>
+      <li each={ n in colorList }>{n}</li>
+    </ul>
 
 
 
@@ -18,11 +21,13 @@
             var green = Math.floor(Math.random() * 255);
             var blue = Math.floor(Math.random() * 255);
             //console.log(blue,red,green);
-            var colorList = [red, green, blue];
+            this.colorList = [red, green, blue];
             var outcolor = "background-color:rgb(" + red.toString(10) + "," + green.toString(10) + "," + blue.toString(10) + ")";
             //console.log(outcolor);
             return outcolor;
         }
+
+
 
         this.on('mount', function(){
           alert("You mounted something!");
@@ -58,8 +63,6 @@
             {
               this.secret = true;
             }
-
-
         }
 
     </script>
@@ -71,6 +74,24 @@
             text-transform: uppercase;
             text-align: center;
             /*background-color: red;*/
+        }
+
+        li:first-child {
+          color: red;
+        }
+
+        li:nth-child(2)
+        {
+          color: green;
+        }
+
+        li:nth-child(3)
+        {
+          color: blue;
+        }
+
+        li {
+          font-size: 100px;
         }
     </style>
 </client>
